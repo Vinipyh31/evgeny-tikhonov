@@ -1,0 +1,25 @@
+{
+  "files": {
+    "main.css": "/evgeny-tikhonov/static/css/main.fbd07196.css",
+    "main.js": "/evgeny-tikhonov/static/js/main.d0091748.js",
+    "static/media/2.jpg": "/evgeny-tikhonov/static/media/2.9dd92a0fac4b0ab4ea74.jpg",
+    "static/media/3.jpg": "/evgeny-tikhonov/static/media/3.5d3c187f2fbd3c64eeca.jpg",
+    "static/media/1.jpg": "/evgeny-tikhonov/static/media/1.45283fac9e27abd632e3.jpg",
+    "static/media/4.jpg": "/evgeny-tikhonov/static/media/4.a853e16b8c7647824be7.jpg",
+    "static/media/5.jpg": "/evgeny-tikhonov/static/media/5.6333c4de388e4ec9e4fb.jpg",
+    "static/media/7.jpg": "/evgeny-tikhonov/static/media/7.5d7a4c22f8257d671075.jpg",
+    "static/media/8.jpg": "/evgeny-tikhonov/static/media/8.d70840583b4c723eb2f9.jpg",
+    "static/media/6.jpg": "/evgeny-tikhonov/static/media/6.0a96dd8881400ba8b5f5.jpg",
+    "static/media/9.jpg": "/evgeny-tikhonov/static/media/9.468250de7a6c7b400836.jpg",
+    "static/media/10.jpg": "/evgeny-tikhonov/static/media/10.ee5f91756f61875568b9.jpg",
+    "static/media/1-1-1.png": "/evgeny-tikhonov/static/media/1-1-1.5b35ca9a5626972b51f5.png",
+    "static/media/Arrow.svg": "/evgeny-tikhonov/static/media/Arrow.6e97b096a09983bd979ed0489d3d3edf.svg",
+    "index.html": "/evgeny-tikhonov/index.html",
+    "main.fbd07196.css.map": "/evgeny-tikhonov/static/css/main.fbd07196.css.map",
+    "main.d0091748.js.map": "/evgeny-tikhonov/static/js/main.d0091748.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.fbd07196.css",
+    "static/js/main.d0091748.js"
+  ]
+}
