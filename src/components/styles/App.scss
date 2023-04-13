@@ -1,0 +1,120 @@
+@import './config.scss';
+
+.App {
+  width: 100%;
+  min-height: 100vh;
+  background-color: #F3F3F5;
+
+  &__content {
+    width: 1200px;
+    margin: 30px auto 0;
+    display: flex;
+    column-gap: 20px;
+    padding-bottom: 30px;
+    scroll-behavior: smooth;
+  }
+}
+
+header {
+  height: 200px;
+  display: flex;
+  flex-direction: column;
+  color: white;
+  justify-content: space-around;
+  align-items: center;
+  background: $teal;
+  background: linear-gradient(90deg, $teal 0%, rgba(175, 174, 244, 1) 120%);
+
+
+  .main-navbar {
+    display: flex;
+    column-gap: 15px;
+    row-gap: 15px;
+
+    a {
+      color: white;
+      position: relative;
+      text-decoration: none;
+      padding: 5px 10px;
+      background-color: $dark-teal;
+      z-index: 2;
+
+      span {
+        z-index: 10;
+      }
+    }
+
+    a:before {
+      content: '';
+      position: absolute;
+      width: 40px;
+      height: 100%;
+      background-color: $dark-teal;
+      transform: skew(-20deg);
+      left: -6px;
+      top: 0;
+      z-index: -1;
+    }
+
+    a:after {
+      z-index: -1;
+      content: '';
+      position: absolute;
+      width: 40px;
+      height: 100%;
+      background-color: $dark-teal;
+      transform: skew(-20deg);
+      right: -6px;
+      top: 0;
+    }
+  }
+}
+
+.nav-column {
+  width: 300px;
+
+  h5 {
+    margin: 5px 0;
+    text-align: justify;
+  }
+}
+
+.content-column {
+  display: flex;
+  flex-direction: column;
+  width: 800px;
+  row-gap: 20px;
+  scroll-behavior: smooth;
+}
+
+.them-list {
+  display: flex;
+  flex-direction: column;
+  list-style-type: none;
+  row-gap: 1px;
+  scroll-behavior: smooth;
+
+  a {
+    scroll-behavior: smooth;
+    text-decoration: none;
+  }
+
+  li {
+    background: #4E5359;
+    color: white;
+    padding: 10px 20px;
+  }
+}
+
+.page-content {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+}
+
+@media (max-width: 1200px) {
+  .App__content {
+    width: 100%;
+  }
+
+}
