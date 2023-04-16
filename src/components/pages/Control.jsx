@@ -10,9 +10,9 @@ const Control = () => {
     <div className='page-content'>
       <div className='nav-column'>
         <nav className='them-list'>
-          <a href="#1"><li><h2>Тест №1</h2></li></a>
-          <a href="#2"><li><h2>Тест №2</h2></li></a>
-          <a href="#3"><li><h2>Тест №3</h2></li></a>
+          <a href="#1"><li><h2>Раздел 1</h2></li></a>
+          <a href="#2"><li><h2>Раздел 2</h2></li></a>
+          <a href="#3"><li><h2>Раздел 3</h2></li></a>
         </nav>
       </div>
       <div className='content-column'>

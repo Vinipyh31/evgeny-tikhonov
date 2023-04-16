@@ -1,16 +1,25 @@
 @import './config.scss';
 
+body {
+  position: relative;
+}
+
 .App {
   width: 100%;
   min-height: 100vh;
   background-color: #F3F3F5;
+
+  &--wrapper {
+    position: relative;
+
+  }
 
   &__content {
     width: 1200px;
     margin: 30px auto 0;
     display: flex;
     column-gap: 20px;
-    padding-bottom: 30px;
+    padding-bottom: 30px + $footer-height;
     scroll-behavior: smooth;
   }
 }
@@ -112,9 +121,43 @@ header {
   justify-content: space-between;
 }
 
+.footer {
+  position: absolute;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  background-color: #394156;
+  width: 100%;
+  height: $footer-height;
+
+  &__content {
+    width: 1200px;
+    height: 100%;
+    text-align: right;
+    padding: 20px 0;
+    color: rgb(172, 172, 172);
+
+    a {
+      color: rgb(172, 172, 172);
+      text-decoration: none;
+    }
+
+    address {
+      font-style: normal;
+    }
+
+    .white-text {
+      color: white;
+    }
+  }
+}
+
 @media (max-width: 1200px) {
   .App__content {
     width: 100%;
   }
 
+  .footer__content {
+    width: 100%;
+  }
 }

@@ -10,7 +10,7 @@ const Question = ({ question, options, correctAnswer, onAnswer }) => {
 
     return (
         <div>
-            <h3>{question}</h3>
+            <h3 style={{whiteSpace: 'pre'}}>{question}</h3>
             {options.map((option) => (
                 <div key={option} className='answer-row'>
                     <label>
