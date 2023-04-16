@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/evgeny-tikhonov/static/css/main.fbd07196.css",
-    "main.js": "/evgeny-tikhonov/static/js/main.d0091748.js",
+    "main.css": "/evgeny-tikhonov/static/css/main.00da82b1.css",
+    "main.js": "/evgeny-tikhonov/static/js/main.b99a49fe.js",
     "static/media/2.jpg": "/evgeny-tikhonov/static/media/2.9dd92a0fac4b0ab4ea74.jpg",
     "static/media/3.jpg": "/evgeny-tikhonov/static/media/3.5d3c187f2fbd3c64eeca.jpg",
     "static/media/1.jpg": "/evgeny-tikhonov/static/media/1.45283fac9e27abd632e3.jpg",
@@ -14,12 +14,13 @@
     "static/media/10.jpg": "/evgeny-tikhonov/static/media/10.ee5f91756f61875568b9.jpg",
     "static/media/1-1-1.png": "/evgeny-tikhonov/static/media/1-1-1.5b35ca9a5626972b51f5.png",
     "static/media/Arrow.svg": "/evgeny-tikhonov/static/media/Arrow.6e97b096a09983bd979ed0489d3d3edf.svg",
+    "static/media/python.svg": "/evgeny-tikhonov/static/media/python.debf8ebe754bf69c3424e71d7b1a604f.svg",
     "index.html": "/evgeny-tikhonov/index.html",
-    "main.fbd07196.css.map": "/evgeny-tikhonov/static/css/main.fbd07196.css.map",
-    "main.d0091748.js.map": "/evgeny-tikhonov/static/js/main.d0091748.js.map"
+    "main.00da82b1.css.map": "/evgeny-tikhonov/static/css/main.00da82b1.css.map",
+    "main.b99a49fe.js.map": "/evgeny-tikhonov/static/js/main.b99a49fe.js.map"
   },
   "entrypoints": [
-    "static/css/main.fbd07196.css",
-    "static/js/main.d0091748.js"
+    "static/css/main.00da82b1.css",
+    "static/js/main.b99a49fe.js"
   ]
 }
