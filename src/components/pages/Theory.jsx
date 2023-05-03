@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import '../styles/Theory.scss'
 import DropDown from '../UI/dropdown/DropDown'
 import t111 from '../images/1-1-1.png'
@@ -112,43 +112,57 @@ import t32p7 from '../images/theory/t-3-2/7.jpg';
 
 
 
+const navList = [
+  "Введение",
+  "Алгоритм и его свойства",
+  "Основные структуры алгоритмов",
+  "Логические основы алгоритмизации",
+  "Языки и системы программирования",
+  "Методы и принципы программирования",
+  "Язык программирования python",
+  "Основные элементы языка python",
+  "Основные алгоритмические инструкции языка",
+  "Коллекции в python",
+  "Строки",
+  "Множества",
+  "Списки",
+  "Кортежи",
+  "Словари",
+  "Функции в python",
+  "Файлы python",
+  "Библиотеки в python.",
+  "Библиотеки python. Работа",
+  "Основы объектно-ориентированного программирования",
+  "Интегрированная среда разработки PyCharm"
+];
+
 const Theory = () => {
+
+  const [idOnScreen, setIdOnScreen] = useState(1);
+   
+  useEffect(() => {
+    console.log(idOnScreen);
+  }, [idOnScreen])
+  
+
   return (
     <div className='page-content'>
       <div className='nav-column'>
-        <h5>Основные принципы алгоритмизации и программирования</h5>
+        {/* <h5>Основные принципы алгоритмизации и программирования</h5> */}
         <nav className='them-list'>
-          <a href="#1"><li>Введение</li></a>
-          <a href="#2"><li>Алгоритм и его свойства</li></a>
-          <a href="#3"><li>Основные структуры алгоритмов</li></a>
-          <a href="#4"><li>Логические основы алгоритмизации</li></a>
-          <a href="#5"><li>Языки и системы программирования</li></a>
-          <a href="#6"><li>Методы и принципы программирования</li></a>
+          {
+            navList.map((navText, i) => <a key={i} href={`#${i + 1}`}><li className={i+1 === idOnScreen ? 'active': ''}>{navText}</li></a>)
+          }
         </nav>
-        <h5>Основы Python</h5>
+        {/* <h5>Основы Python</h5>
         <nav className='them-list'>
-          <a href="#7"><li>Язык программирования python</li></a>
-          <a href="#8"><li>Основные элементы языка python</li></a>
-          <a href="#9"><li>Основные алгоритмические инструкции языка python</li></a>
-          <a href="#10"><li>Коллекции в python</li></a>
-          <a href="#11"><li>Строки</li></a>
-          <a href="#12"><li>Множества</li></a>
-          <a href="#13"><li>Списки</li></a>
-          <a href="#14"><li>Кортежи</li></a>
-          <a href="#15"><li>Словари</li></a>
-          <a href="#16"><li>Функции в python</li></a>
-          <a href="#17"><li>Файлы python</li></a>
-          <a href="#18"><li>Библиотеки в python. Модули. Создание и подключение модулей</li></a>
-          <a href="#19"><li>Библиотеки python. Работа с изображениями</li></a>
         </nav>
         <h5>Объектно-ориентированное программирование</h5>
         <nav className='them-list'>
-          <a href="#20"><li>Основы объектно-ориентированного программирования (ООП)</li></a>
-          <a href="#21"><li>Интегрированная среда разработки PyCharm</li></a>
-        </nav>
+        </nav> */}
       </div>
       <div className='content-column'>
-        <DropDown id={'1'} title={'Введение'}>
+        <DropDown setObservedId={setIdOnScreen} set id={'1'} title={'Введение'}>
           <p style={{ margin: '0cm', marginBottom: '.0001pt', fontSize: '16px', fontFamily: '"Times New Roman",serif', textAlign: 'center' }}><strong><span style={{ fontFamily: '"TimesNewRoman\,Bold"' }}>ВВЕДЕНИЕ</span></strong></p>
           <p style={{ margin: '0cm', marginBottom: '.0001pt', fontSize: '16px', fontFamily: '"Times New Roman",serif', textAlign: 'justify', textIndent: '27.0pt' }}><span style={{ fontFamily: 'TimesNewRoman' }}>&nbsp;</span></p>
           <p style={{ margin: '0cm', marginBottom: '.0001pt', fontSize: '16px', fontFamily: '"Times New Roman",serif', textAlign: 'justify', textIndent: '36.0pt' }}><span style={{ fontFamily: 'TimesNewRoman' }}>В настоящее время на ЭВМ решают самые разнообразные задачи. В каждом случае ЭВМ выполняет какую-то программу. Некоторые из программ требуют от пользователя специальных знаний и высокой квалификации. Несмотря на бесконечное разнообразие программ, в самом процессе их изготовления можно выделить несколько этапов решения задачи на ЭВМ:</span></p>
@@ -177,7 +191,7 @@ const Theory = () => {
             <li><span style={{ fontFamily: 'TimesNewRoman' }}>уметь работать в соответствующей системе программирования.</span></li>
           </ol>
         </DropDown>
-        <DropDown id={'2'} title={'Алгоритм и его свойства'}>
+        <DropDown setObservedId={setIdOnScreen} set id={'2'} title={'Алгоритм и его свойства'}>
           <p style={{ margin: '0cm', marginBottom: '.0001pt', fontSize: '16px', fontFamily: '"Times New Roman",serif', textAlign: 'center' }}><em><span style={{ fontSize: '19px', fontFamily: 'TimesNewRoman' }}>Тема 1.1&nbsp;</span></em><strong><span style={{ fontSize: '19px', fontFamily: 'TimesNewRoman' }}>&nbsp;Алгоритм и его свойства</span></strong></p>
           <p style={{ margin: '0cm', marginBottom: '.0001pt', fontSize: '16px', fontFamily: '"Times New Roman",serif', textAlign: 'center' }}><strong><span style={{ fontFamily: 'TimesNewRoman' }}>&nbsp;</span></strong></p>
           <p style={{ margin: '0cm', marginBottom: '.0001pt', fontSize: '16px', fontFamily: '"Times New Roman",serif', textAlign: 'justify', textIndent: '35.4pt' }}><strong><em><span style={{ fontFamily: 'TimesNewRoman' }}>1. Понятие алгоритма и его свойства</span></em></strong></p>
@@ -260,32 +274,32 @@ const Theory = () => {
             </li>
           </ul>
         </DropDown>
-        <DropDown id={'3'} title={'Основные структуры алгоритмов'}>
+        <DropDown setObservedId={setIdOnScreen} set id={'3'} title={'Основные структуры алгоритмов'}>
           <img src={t12p1} alt="" />
           <img src={t12p2} alt="" />
           <img src={t12p3} alt="" />
           <img src={t12p4} alt="" />
         </DropDown>
-        <DropDown id={'4'} title={'Логические основы алгоритмизации'}>
+        <DropDown setObservedId={setIdOnScreen} set id={'4'} title={'Логические основы алгоритмизации'}>
           <img src={t13p1} alt="" />
           <img src={t13p2} alt="" />
         </DropDown>
-        <DropDown id={'5'} title={'Языки и системы программирования'}>
+        <DropDown setObservedId={setIdOnScreen} set id={'5'} title={'Языки и системы программирования'}>
           <img src={t14p1} alt="" />
           <img src={t14p2} alt="" />
           <img src={t14p3} alt="" />
 
         </DropDown>
-        <DropDown id={'6'} title={'Методы и принципы программирования'}>
+        <DropDown setObservedId={setIdOnScreen} set id={'6'} title={'Методы и принципы программирования'}>
           <img src={t15p1} alt="" />
           <img src={t15p2} alt="" />
         </DropDown>
         <br />
-        <DropDown id={'7'} title={'Язык программирования python'}>
+        <DropDown setObservedId={setIdOnScreen} set id={'7'} title={'Язык программирования python'}>
           <img src={t21p1} alt="" />
           <img src={t21p2} alt="" />
         </DropDown>
-        <DropDown id={'8'} title={'Основные элементы языка python'}>
+        <DropDown setObservedId={setIdOnScreen} set id={'8'} title={'Основные элементы языка python'}>
           <img src={t22p1} alt="" />
           <img src={t22p2} alt="" />
           <img src={t22p3} alt="" />
@@ -295,7 +309,7 @@ const Theory = () => {
           <img src={t22p7} alt="" />
           <img src={t22p8} alt="" />
         </DropDown>
-        <DropDown id={'9'} title={'Основные алгоритмические инструкции языка python'}>
+        <DropDown setObservedId={setIdOnScreen} set id={'9'} title={'Основные алгоритмические инструкции языка python'}>
           <img src={t23p1} alt="" />
           <img src={t23p2} alt="" />
           <img src={t23p3} alt="" />
@@ -304,52 +318,52 @@ const Theory = () => {
           <img src={t23p6} alt="" />
           <img src={t23p7} alt="" />
         </DropDown>
-        <DropDown id={'10'} title={'Коллекции в python'}>
+        <DropDown setObservedId={setIdOnScreen} set id={'10'} title={'Коллекции в python'}>
           <img src={t24p1} alt="" />
           <img src={t24p2} alt="" />
         </DropDown>
-        <DropDown id={'11'} title={'Строки'}>
+        <DropDown setObservedId={setIdOnScreen} set id={'11'} title={'Строки'}>
           <img src={t25p1} alt="" />
           <img src={t25p2} alt="" />
           <img src={t25p3} alt="" />
           <img src={t25p4} alt="" />
           <img src={t25p5} alt="" />
         </DropDown>
-        <DropDown id={'12'} title={'Множества'}>
+        <DropDown setObservedId={setIdOnScreen} set id={'12'} title={'Множества'}>
           <img src={t26p1} alt="" />
           <img src={t26p2} alt="" />
           <img src={t26p3} alt="" />
         </DropDown>
-        <DropDown id={'13'} title={'Списки'}>
+        <DropDown setObservedId={setIdOnScreen} set id={'13'} title={'Списки'}>
           <img src={t27p1} alt="" />
           <img src={t27p2} alt="" />
           <img src={t27p3} alt="" />
           <img src={t27p4} alt="" />
           <img src={t27p5} alt="" />
         </DropDown>
-        <DropDown id={'14'} title={'Кортежи'}>
+        <DropDown setObservedId={setIdOnScreen} set id={'14'} title={'Кортежи'}>
           <img src={t28p1} alt="" />
           <img src={t28p2} alt="" />
         </DropDown>
-        <DropDown id={'15'} title={'Словари'}>
+        <DropDown setObservedId={setIdOnScreen} set id={'15'} title={'Словари'}>
           <img src={t29p1} alt="" />
           <img src={t29p2} alt="" />
           <img src={t29p3} alt="" />
         </DropDown>
-        <DropDown id={'16'} title={'Функции в python'}>
+        <DropDown setObservedId={setIdOnScreen} set id={'16'} title={'Функции в python'}>
           <img src={t210p1} alt="" />
           <img src={t210p2} alt="" />
           <img src={t210p3} alt="" />
           <img src={t210p4} alt="" />
           <img src={t210p5} alt="" />
         </DropDown>
-        <DropDown id={'17'} title={'Файлы python'}>
+        <DropDown setObservedId={setIdOnScreen} set id={'17'} title={'Файлы python'}>
           <img src={t211p1} alt="" />
           <img src={t211p2} alt="" />
           <img src={t211p3} alt="" />
           <img src={t211p4} alt="" />
         </DropDown>
-        <DropDown id={'18'} title={'Библиотеки в python. Модули. Создание и подключение модулей'}>
+        <DropDown setObservedId={setIdOnScreen} set id={'18'} title={'Библиотеки в python. Модули. Создание и подключение модулей'}>
           <img src={t212p1} alt="" />
           <img src={t212p2} alt="" />
           <img src={t212p3} alt="" />
@@ -359,7 +373,7 @@ const Theory = () => {
           <img src={t212p7} alt="" />
           <img src={t212p8} alt="" />
         </DropDown>
-        <DropDown id={'19'} title={'Библиотеки python. Работа с изображениями'}>
+        <DropDown setObservedId={setIdOnScreen} set id={'19'} title={'Библиотеки python. Работа с изображениями'}>
           <img src={t213p1} alt="" />
           <img src={t213p2} alt="" />
           <img src={t213p3} alt="" />
@@ -372,14 +386,14 @@ const Theory = () => {
           <img src={t213p10} alt="" />
         </DropDown>
         <br />
-        <DropDown id={'20'} title={'Основы объектно-ориентированного программирования (ООП)'}>
+        <DropDown setObservedId={setIdOnScreen} set id={'20'} title={'Основы объектно-ориентированного программирования (ООП)'}>
           <img src={t31p1} alt="" />
           <img src={t31p2} alt="" />
           <img src={t31p3} alt="" />
           <img src={t31p4} alt="" />
           <img src={t31p5} alt="" />
         </DropDown>
-        <DropDown id={'21'} title={'Интегрированная среда разработки PyCharm'}>
+        <DropDown setObservedId={setIdOnScreen} set id={'21'} title={'Интегрированная среда разработки PyCharm'}>
           <img src={t32p1} alt="" />
           <img src={t32p2} alt="" />
           <img src={t32p3} alt="" />

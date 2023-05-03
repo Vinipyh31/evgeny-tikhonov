@@ -17,7 +17,7 @@ const AppRouter = () => {
             <Route key='/literature' path='/literature' element={<Literature />} />
             <Route
                 path="*"
-                element={<Navigate to="/main" replace />}
+                element={<Navigate to="/theory" replace />}
             />
         </Routes>
     )

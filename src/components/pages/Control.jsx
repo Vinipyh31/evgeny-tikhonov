@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import DropDown from '../UI/dropdown/DropDown';
 import Quiz from '../Quiz';
 import '../styles/Control.scss'
@@ -6,6 +6,9 @@ import Quizs from '../../Quizs';
 
 
 const Control = () => {
+
+
+
   return (
     <div className='page-content'>
       <div className='nav-column'>
@@ -16,9 +19,9 @@ const Control = () => {
         </nav>
       </div>
       <div className='content-column'>
-        <DropDown id={'1'} title={'Тест №1'}><Quiz questions={Quizs.quiz1}/></DropDown>
-        <DropDown id={'2'} title={'Тест №2'}><Quiz questions={Quizs.quiz2}/></DropDown>
-        <DropDown id={'3'} title={'Тест №3'}><Quiz questions={Quizs.quiz3}/></DropDown>
+        <DropDown setObservedId={() => {}} id={'1'} title={'Тест №1'}><Quiz questions={Quizs.quiz1}/></DropDown>
+        <DropDown setObservedId={() => {}} id={'2'} title={'Тест №2'}><Quiz questions={Quizs.quiz2}/></DropDown>
+        <DropDown setObservedId={() => {}} id={'3'} title={'Тест №3'}><Quiz questions={Quizs.quiz3}/></DropDown>
       </div>
     </div>
   )

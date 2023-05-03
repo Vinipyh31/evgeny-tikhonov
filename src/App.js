@@ -7,14 +7,14 @@ function App() {
     <BrowserRouter>
       <div className='App'>
         <header>
-          <h1>ЭУП по дисциплине «Основы алгоритмизации и программирования»</h1>
+          {/* <h1>ЭУП по дисциплине «Основы алгоритмизации и программирования»</h1> */}
           <nav className='main-navbar'>
-            <Link to='/main'><span>Главная</span></Link>
-            <Link to='/theory'><span>Теория</span></Link>
-            <Link to='/practice'><span>Практика</span></Link>
-            <Link to='/control'><span>Контроль</span></Link>
-            <Link to='/gloss'><span>Глоссарий</span></Link>
-            <Link to='/literature'><span>Литература</span></Link>
+            {/* <Link to='/main'><span>Главная</span></Link> */}
+            <Link to='/theory'><span>ТЕОРИЯ</span></Link>
+            <Link to='/control'><span>ТЕСТИРОВАНИЕ</span></Link>
+            <Link to='/practice'><span>ЛАБОРАТОРНЫЕ РАБОТЫ</span></Link>
+            {/* <Link to='/gloss'><span>Глоссарий</span></Link> */}
+            {/* <Link to='/literature'><span>Литература</span></Link> */}
           </nav>
         </header>
         <div className='App__content'>
