@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react'
+import { animateScroll as scroll } from 'react-scroll';
 import '../styles/Theory.scss'
 import DropDown from '../UI/dropdown/DropDown'
 import t111 from '../images/1-1-1.png'
@@ -109,6 +110,7 @@ import t32p4 from '../images/theory/t-3-2/4.jpg';
 import t32p5 from '../images/theory/t-3-2/5.jpg';
 import t32p6 from '../images/theory/t-3-2/6.jpg';
 import t32p7 from '../images/theory/t-3-2/7.jpg';
+import { Link } from 'react-router-dom'
 
 
 
@@ -131,19 +133,26 @@ const navList = [
   "Функции в python",
   "Файлы python",
   "Библиотеки в python.",
-  "Библиотеки python. Работа",
+  "Библиотеки python. Работа c изображениями",
   "Основы объектно-ориентированного программирования",
   "Интегрированная среда разработки PyCharm"
 ];
 
 const Theory = () => {
 
+  const scrollToElement = (elementId) => {
+    scroll.scrollTo(elementId, {
+      duration: 500, // Длительность прокрутки в миллисекундах
+      smooth: true, // Плавная прокрутка
+    });
+  };
+
   const [idOnScreen, setIdOnScreen] = useState(1);
-   
+
   useEffect(() => {
     console.log(idOnScreen);
   }, [idOnScreen])
-  
+
 
   return (
     <div className='page-content'>
@@ -151,7 +160,12 @@ const Theory = () => {
         {/* <h5>Основные принципы алгоритмизации и программирования</h5> */}
         <nav className='them-list'>
           {
-            navList.map((navText, i) => <a key={i} href={`#${i + 1}`}><li className={i+1 === idOnScreen ? 'active': ''}>{navText}</li></a>)
+            navList.map((navText, i) => <>
+              {i === 0 && <h5 key="h51">Основные принципы алгоритмизации и программирования</h5>}
+              {i === 6 && <h5 key="h52">Основы Python</h5>}
+              {i === 19 && <h5 key="h53">Объектно-ориентированное программирование</h5>}
+              <a key={i} href={`#${i + 1}`}><li className={i + 1 === idOnScreen ? 'active' : ''}>{navText}</li></a>
+            </>)
           }
         </nav>
         {/* <h5>Основы Python</h5>
@@ -162,6 +176,7 @@ const Theory = () => {
         </nav> */}
       </div>
       <div className='content-column'>
+        <h1>Основные принципы алгоритмизации и программирования</h1>
         <DropDown setObservedId={setIdOnScreen} set id={'1'} title={'Введение'}>
           <p style={{ margin: '0cm', marginBottom: '.0001pt', fontSize: '16px', fontFamily: '"Times New Roman",serif', textAlign: 'center' }}><strong><span style={{ fontFamily: '"TimesNewRoman\,Bold"' }}>ВВЕДЕНИЕ</span></strong></p>
           <p style={{ margin: '0cm', marginBottom: '.0001pt', fontSize: '16px', fontFamily: '"Times New Roman",serif', textAlign: 'justify', textIndent: '27.0pt' }}><span style={{ fontFamily: 'TimesNewRoman' }}>&nbsp;</span></p>
@@ -294,7 +309,8 @@ const Theory = () => {
           <img src={t15p1} alt="" />
           <img src={t15p2} alt="" />
         </DropDown>
-        <br />
+        <Link to="/control/quiz1" className='test-btn'>Перейти к тестированию <br/>По 1 разделу</Link>
+        <h1>Основы Python</h1>
         <DropDown setObservedId={setIdOnScreen} set id={'7'} title={'Язык программирования python'}>
           <img src={t21p1} alt="" />
           <img src={t21p2} alt="" />
@@ -318,6 +334,12 @@ const Theory = () => {
           <img src={t23p6} alt="" />
           <img src={t23p7} alt="" />
         </DropDown>
+        <iframe width="978px" height="550px" src="https://www.youtube.com/embed/EggJRTzid1M" title="15 Условный оператор if Python. Если Python" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreenfullscreen></iframe>
+        <iframe width="978px" height="550px" src="https://www.youtube.com/embed/8YshxYHIeeI" title="16 Вложенный оператор if Python" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreenscreen></iframe>
+        <iframe width="978px" height="550px" src="https://www.youtube.com/embed/8F-EfhsKHCI" title="17 Множественный выбор elif Python" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowTransparencywfullscreen></iframe>
+        <iframe width="978px" height="550px" src="https://www.youtube.com/embed/Ll3AN1FXXfE" title="18 Цикл while Python" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreenlscreen></iframe>
+        <iframe width="978px" height="550px" src="https://www.youtube.com/embed/Myh7OdxoYsA" title="22 Цикл while. Инструкции break, continue, else" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreenfullscreen></iframe>
+        <iframe width="978px" height="550px" src="https://www.youtube.com/embed/yPUA8xBEyzM" title="24 Цикл for. Обход элементов функции range Python" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreenllscreen></iframe>
         <DropDown setObservedId={setIdOnScreen} set id={'10'} title={'Коллекции в python'}>
           <img src={t24p1} alt="" />
           <img src={t24p2} alt="" />
@@ -334,6 +356,7 @@ const Theory = () => {
           <img src={t26p2} alt="" />
           <img src={t26p3} alt="" />
         </DropDown>
+        <iframe width="978px" height="550px" src="https://www.youtube.com/embed/KMGRXDxUw18" title="31 Множества в Python. Тип данных set" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
         <DropDown setObservedId={setIdOnScreen} set id={'13'} title={'Списки'}>
           <img src={t27p1} alt="" />
           <img src={t27p2} alt="" />
@@ -341,6 +364,10 @@ const Theory = () => {
           <img src={t27p4} alt="" />
           <img src={t27p5} alt="" />
         </DropDown>
+        <iframe width="978px" height="550px" src="https://www.youtube.com/embed/CEQZYZMPJSU" title="12 Списки и операции над ними Python" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        <iframe width="978px" height="550px" src="https://www.youtube.com/embed/z8WWOnxUOb8" title="13 Списки: индексы и срезы Python" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        <iframe width="978px" height="550px" src="https://www.youtube.com/embed/e0If6CJZs4s" title="14 Списки и их методы Python" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
         <DropDown setObservedId={setIdOnScreen} set id={'14'} title={'Кортежи'}>
           <img src={t28p1} alt="" />
           <img src={t28p2} alt="" />
@@ -357,6 +384,9 @@ const Theory = () => {
           <img src={t210p4} alt="" />
           <img src={t210p5} alt="" />
         </DropDown>
+        <iframe width="978px" height="550px" src="https://www.youtube.com/embed/DJAlfolEv9A" title="35 Функции (def) в Python. Определение и вызов функции" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        <iframe width="978px" height="550px" src="https://www.youtube.com/embed/cWyUODRGIDY" title="37 Возвращаемое значение функции. Оператор return Python" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+        <iframe width="978px" height="550px" src="https://www.youtube.com/embed/mcAB5dBXMp4" title="40 *args и **kwargs Python. Передача аргументов в функцию" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
         <DropDown setObservedId={setIdOnScreen} set id={'17'} title={'Файлы python'}>
           <img src={t211p1} alt="" />
           <img src={t211p2} alt="" />
@@ -385,7 +415,8 @@ const Theory = () => {
           <img src={t213p9} alt="" />
           <img src={t213p10} alt="" />
         </DropDown>
-        <br />
+        <Link to="/control/quiz2" className='test-btn'>Перейти к тестированию <br />По 2 разделу</Link>
+        <h1>Объектно-ориентированное программирование</h1>
         <DropDown setObservedId={setIdOnScreen} set id={'20'} title={'Основы объектно-ориентированного программирования (ООП)'}>
           <img src={t31p1} alt="" />
           <img src={t31p2} alt="" />
@@ -403,7 +434,8 @@ const Theory = () => {
           <img src={t32p7} alt="" />
 
         </DropDown>
-
+        <Link to="/control/quiz3" className='test-btn'>Перейти к тестированию <br />По 3 разделу</Link>
+        <Link to="/control/quiz-itog" className='test-btn'>Перейти к итоговому тестированию</Link>
       </div>
     </div>
   )
