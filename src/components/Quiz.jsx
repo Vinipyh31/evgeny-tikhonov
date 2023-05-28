@@ -17,7 +17,7 @@ const Question = ({ question, options, correctAnswer, onAnswer, setQuizStart, qu
             <h3 style={{ whiteSpace: 'pre' }}>{question}</h3>
             {options.map((option) => (
                 <div key={option} className='answer-row'>
-                    <label>
+                    {/* <label>
                         <input
                             type="radio"
                             name="option"
@@ -26,7 +26,8 @@ const Question = ({ question, options, correctAnswer, onAnswer, setQuizStart, qu
                             onChange={() => handleOptionSelect(option)}
                         />
                         {option}
-                    </label>
+                    </label> */}
+                    <input type="button" value={option} onClick={() => handleOptionSelect(option)} />
                 </div>
             ))}
         </div>
